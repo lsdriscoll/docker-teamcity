@@ -3,6 +3,7 @@ FROM java:openjdk-7-jre
 MAINTAINER Eugene Volchek <evolchek@klika-tech.com>
 
 ENV TEAMCITY_VERSION 9.0.3
+ENV TEAMCITY_DATA_PATH /var/lib/teamcity
 VOLUME ["/var/lib/teamcity"]
 RUN mkdir -p /var/lib/teamcity \
 	&& groupadd -g 999 teamcity \
